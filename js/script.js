@@ -85,7 +85,7 @@ function getQueryParams() {
 function sheetsCardAndHeading(composer, section) {
     const topBar = document.getElementsByClassName("topBar")[0];
     if (topBar) {
-        topBar.innerHTML = `<img onclick="window.history.back();" src="/images/arrow_left.svg">
+        topBar.innerHTML = `<img onclick="window.history.back();" src="images/arrow_left.svg">
             <h2>${composer}</h2>`;
     }
 
@@ -108,12 +108,12 @@ function sheetsCardAndHeading(composer, section) {
                 <p>${cardData[composer][i].movie}</p>`;
         if ("museScoreLink" in cardData[composer][i]) {
             cardHTML += `<button onClick="window.location.href='${cardData[composer][i].museScoreLink}';">Musescore <img
-                        src="/images/external_link_icon.svg"> </button>
+                        src="images/external_link_icon.svg"> </button>
             </div>`
         } else {
             const encodedLink = encodeURI(cardData[composer][i].downloadLink);
             cardHTML += `<a href="${encodedLink}" download>
-                            <button>Download <img src="/images/external_link_icon.svg"> </button>
+                            <button>Download <img src="images/external_link_icon.svg"> </button>
                         </a>
                     </div>`
         }
