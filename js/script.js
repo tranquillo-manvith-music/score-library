@@ -125,14 +125,16 @@ function sheetsCardAndHeading(composer, section) {
 
 async function main() {
     await loadscores();
-    if (window.location.pathname.includes("index.html")) {
+    const currentPage = window.location.pathname.split('/').pop();
+
+    if (currentPage === "index.html") {
         card(full_scores, "full_scores_container");
         card(reduction_analysis, "reduction_container");
         card(my_scores, "myscores_container");
         getCardComposerAndId();
     }
 
-    if (window.location.pathname.includes("scores-listing.html")) {
+    if (currentPage === "scores-listing.html") {
         const { composer, section } = getQueryParams();
         console.log(composer);
         console.log(section);
