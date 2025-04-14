@@ -127,7 +127,7 @@ async function main() {
     await loadscores();
     const currentPage = window.location.pathname.split('/').pop();
 
-    if (currentPage === "index.html") {
+    if (currentPage === "" || currentPage === "index.html") {
         card(full_scores, "full_scores_container");
         card(reduction_analysis, "reduction_container");
         card(my_scores, "myscores_container");
