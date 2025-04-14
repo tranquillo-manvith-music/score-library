@@ -4,21 +4,21 @@ let my_scores;
 
 async function loadscores() {
     try {
-        const response = await fetch('/json/full_scores.json');
+        const response = await fetch('json/full_scores.json');
         full_scores = await response.json();
     }
     catch (error) {
         console.log('Failed To load full_scores.json:', error);
     }
     try {
-        const response = await fetch('/json/scores_reduction_and_analysis.json');
+        const response = await fetch('json/scores_reduction_and_analysis.json');
         reduction_analysis = await response.json();
     }
     catch (error) {
         console.log('Failed To load scores_reduction_and_analysis.json:', error);
     }
     try {
-        const response = await fetch('/json/my_scores.json');
+        const response = await fetch('json/my_scores.json');
         const text = await response.text();
         if (text.trim() == "") {
 
