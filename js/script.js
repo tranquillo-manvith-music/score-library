@@ -111,7 +111,7 @@ function sheetsCardAndHeading(composer, section) {
                         src="images/external_link_icon.svg"> </button>
             </div>`
         } else {
-            const encodedLink = encodeURI(cardData[composer][i].downloadLink);
+            const encodedLink = encodeURI("https://tranquillo-manvith-music.github.io/score-library/" + cardData[composer][i].downloadLink);
             cardHTML += `<a href="${encodedLink}" download>
                             <button>Download <img src="images/external_link_icon.svg"> </button>
                         </a>
